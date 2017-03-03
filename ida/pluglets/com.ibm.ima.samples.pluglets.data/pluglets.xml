@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pluglets>
+   <require>
+      <import plugin="com.ibm.xtools.pluglets"/>
+      <import plugin="com.ibm.datatools.pluglets.ui"/>
+      <import plugin="com.ibm.datatools.pluglets.tasks"/>
+      <import plugin="com.ibm.datatools.pluglets.samples"/>
+      <import plugin="com.ibm.datatools.core"/>
+      <import plugin="com.ibm.datatools.core.ui"/>
+      <import plugin="com.ibm.datatools.project.ui"/>
+      <import plugin="org.eclipse.datatools.modelbase.sql"/>
+      <import plugin="com.ibm.datatools.diagram.core"/>
+   </require>
+</pluglets>
