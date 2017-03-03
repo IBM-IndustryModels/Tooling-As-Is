@@ -1,7 +1,7 @@
 IDA Pluglets (Tooling-As-Is)
 ============================
 
-The following are a collection of pluglets that can be used with IDA (IBM InfoSphere Data Architect) and IBM Industry Models Data models.
+The following are a collection of pluglets that can be used with IDA (IBM InfoSphere Data Architect) and IBM Industry Models.
 
 Please note an important notice regarding the support, usage & terms for using these pluglets is contined here;
 https://github.com/IBM-IndustryModels/Tooling-As-Is
