@@ -16,8 +16,8 @@ Pluglet Index
 
 <br>Name : Toggle Persistence
 <br>Java class : [TogglePersistence.java](https://github.com/IBM-IndustryModels/Tooling-As-Is/blob/master/ida/pluglets/com/ibm/ima/samples/pluglets/data/TogglePersistence.java)
-<br>Description : The purpose of this pluglet is to xxxxx
+<br>Description : The purpose of this pluglet is to reverse the peristent flag for a selection of one or more elements in the Data Project Explorer in IDA. 'Persistent' will be set or unset (depending on the existing setting) for Entities, Attributes and Relationships selected.
 
 <br>Name : Toggle PersistenceDiagram
 <br>Java class : [TogglePersistenceDiagram.java](https://github.com/IBM-IndustryModels/Tooling-As-Is/blob/master/ida/pluglets/com/ibm/ima/samples/pluglets/data/TogglePersistenceDiagram.java)
-<br>Description : The purpose of this pluglet is to xxxxx
+<br>Description : The purpose of this pluglet is to reverse the peristent flag for a selection of one or more elements in a Diagram in IDA. 'Persistent' will be set or unset (depending on the existing setting) for Entities, Attributes and Relationships selected.
