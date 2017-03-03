@@ -10,17 +10,16 @@ https://github.com/IBM-IndustryModels/Tooling-As-Is
 Pluglet Index
 ==============
 
-*Name : Physical:Set FK Relationships To Not Enforced
-*Java class : ToggleEnforcedOnRelationshipsDBM.java 
-*Description : The purpose of this pluglet is to turn *OFF* the flag on Enforced to Not Enforced for FK's in a physical data model
+<br>Name : Physical:Set FK Relationships To Not Enforced
+<br>Java class : ToggleEnforcedOnRelationshipsDBM.java
+<br>Description : The purpose of this pluglet is to turn *OFF* the flag on Enforced to Not Enforced for FK's in a physical data model</br>
 
 
-*Name : Toggle Persistence
-*Java class : TogglePersistence.java
-*Description : The purpose of this pluglet is to xxxxx
+<br>Name : Toggle Persistence
+<br>Java class : TogglePersistence.java
+<br>Description : The purpose of this pluglet is to xxxxx</br>
 
 
-*Name : Toggle PersistenceDiagram
-*Java class : TogglePersistenceDiagram.java
-*Description : The purpose of this pluglet is to xxxxx
-
+<br>Name : Toggle PersistenceDiagram
+<br>Java class : TogglePersistenceDiagram.java
+<br>Description : The purpose of this pluglet is to xxxxx</br>
