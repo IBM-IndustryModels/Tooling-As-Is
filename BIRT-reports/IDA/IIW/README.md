@@ -1,1 +1,3 @@
+See this doc for instructions on importing & running a BIRT report...
+https://github.com/IBM-IndustryModels/Tooling-As-Is/blob/master/BIRT-reports/IDA/Instructions%20for%20importing%20and%20running%20BIRT%20reports%20in%20IDA.pdf
 
