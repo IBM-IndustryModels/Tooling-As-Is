@@ -10,14 +10,14 @@ Instructions on installing and running the pluglets could be found here : [Instr
 
 Pluglet Index
 ==============
-<br>Name : Set Foreign Key Relationships To Not Enforced in Physical Data Model
+<br>Name : **Set Foreign Key Relationships To Not Enforced in Physical Data Model**
 <br>Java class : [SetForeignKeyRelationshipsToNotEnforcedInDBM.java](https://github.com/IBM-IndustryModels/Tooling-As-Is/blob/master/ida/pluglets/com/ibm/ima/samples/pluglets/data/SetForeignKeyRelationshipsToNotEnforcedInDBM.java)
 <br>Description : The purpose of this pluglet is to set the Enforced flag to false for all Foreign Keys in a physical data model
 
-<br>Name : Toggle Persistence
+<br>Name : **Toggle Persistence**
 <br>Java class : [TogglePersistence.java](https://github.com/IBM-IndustryModels/Tooling-As-Is/blob/master/ida/pluglets/com/ibm/ima/samples/pluglets/data/TogglePersistence.java)
 <br>Description : The purpose of this pluglet is to reverse the peristent flag for a selection of one or more elements in the Data Project Explorer in IDA. 'Persistent' will be set or unset (depending on the existing setting) for Entities, Attributes and Relationships selected.
 
-<br>Name : Toggle PersistenceDiagram
+<br>Name : **Toggle PersistenceDiagram**
 <br>Java class : [TogglePersistenceDiagram.java](https://github.com/IBM-IndustryModels/Tooling-As-Is/blob/master/ida/pluglets/com/ibm/ima/samples/pluglets/data/TogglePersistenceDiagram.java)
 <br>Description : The purpose of this pluglet is to reverse the peristent flag for a selection of one or more elements in a Diagram in IDA. 'Persistent' will be set or unset (depending on the existing setting) for Entities, Attributes and Relationships selected.
