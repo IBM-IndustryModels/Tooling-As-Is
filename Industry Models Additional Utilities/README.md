@@ -6,14 +6,14 @@ https://github.com/IBM-IndustryModels/Tooling-As-Is
 
 From time to time, the IBM Industry Models team  make available 'Industry Models - Additional Utilities'. If this folder does not contain any repository installers (.zip files) then there are no current additional utilties available. 
 
-When using both the 'Industry Models Utilities' and 'Industry Models - Additional Utilities' -- it is imperative that compatible builds
-are only installed together. This is because 'Industry Models - Additional Utilities' has a hard dependency on being installed after
-a compatible 'Industry Models Utilities'. e.g. The version within of installation repoistories .g. 04110.I20170726-1705 ... identifies compatible installation pairs.
+When using both the 'Industry Models Utilities' and 'Industry Models Additional Utilities' -- it is imperative that compatible builds
+are only installed together. This is because 'Industry Models Additional Utilities' has a hard dependency on being installed after
+a compatible 'Industry Models Utilities'. e.g. The version within of installation repositories e.g. 04110.I20170726-1705 ... identifies compatible installation pairs.
 
-In order to install the Industry Models Additional Utilities' - please ensure you have an uptodate 'Industry Models Utilities' installed. Install or update your 'Industry Models Utilities' using;
+In order to install the 'Industry Models Additional Utilities' - please ensure you have an uptodate 'Industry Models Utilities' installed. Install or update your 'Industry Models Utilities' using;
 http://www.ibm.com/support/fixcentral/quickorder?product=ibm%2FInformation+Management%2FIBM+Banking+and+Financial+Markets+Data+Warehouse&fixids=industry-models-utilities.04110.I20170726-1705.runtime-update_site.zip&source=SAR
 
-To check what version of 'Industry Models Utilities' you have installed - see Help, About, Installation Details to see what version of the Industry Models Utilities are installed. If you have installed the utilties from an 8.9.1 or earlier version of our Banking or Insurance offerings - then use the link above to update to the latest version - before installing the 'Industry Models Additional Utilities'.
+To check what version of 'Industry Models Utilities' you have installed in your eclipse application (e.g. IDA and/or RSA) - see Help, About, Installation Details to see what version of the Industry Models Utilities are installed. If you have installed the Industry Models Utilties from an 8.9.1 or an earlier version of our Banking or Insurance offerings - then use the link above to update to the latest version - before installing the 'Industry Models Additional Utilities' outlined in this instruction.
 
 # To install the Industry Models Additional Utilities:
 If you want to use IGC with IDA or RSA, install the IGC for Eclipse plug-in before you install the IBM Industry Model Utilities & Industry Models Additional Utilities.
@@ -31,20 +31,21 @@ If you want to use IGC with IDA or RSA, install the IGC for Eclipse plug-in befo
 * After you restart IDA, you can verify that the Industry Models Utilities features were installed. Go to the Help menu and select About InfoSphere Data Architect. Click Installation Details. IBM Industry Models Utilities features are listed on the Installed Software tab.
 
 # Addendum: Categories explained
-The following explain the categories options for installing Industry Models Utilities / Industry Models Additional Utilities
-(choose your product conbination)
+The following explains the categories options for installing Industry Models Utilities / Industry Models Additional Utilities
+(choose your product Knowledge Center)
 
-## Banking and Financial Markets
+## IBM Banking and Financial Markets Data Warehouse
 https://www.ibm.com/support/knowledgecenter/SSN364_8.9.1/com.ibm.ima.adm/soa/InfoSphere/too_gui/im_uti_cat.html
 
-## Insurance Information Warehouse
+## IBM Insurance Information Warehouse
 https://www.ibm.com/support/knowledgecenter/SSRAR8_8.9.1/com.ibm.ima.adm/soa/InfoSphere/too_gui/im_uti_cat.html
 
-## Banking Process and Service Models
+## IBM Banking Process and Service Models
 https://www.ibm.com/support/knowledgecenter/SSRA3Z_8.9.1/com.ibm.ima.too_gui/soa/InfoSphere/too_gui/im_uti_cat.html
 
-There is no direct support offered for 'Industry Models Additional Utilities' or other 'Tooling-as-is'components. 
-'Industry Models Utilities' issues or problems can be raised by opening a case against your product using  
+## Note: 
+* There is no direct support offered for 'Industry Models Additional Utilities' or other 'Tooling-as-is'components. 
+* 'Industry Models Utilities' issues or problems can be raised by opening a case against your product using  
 
 Regards,
 Industry Models Development Team, IBM
