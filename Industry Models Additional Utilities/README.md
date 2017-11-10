@@ -1,5 +1,4 @@
-Industry Models Additional Utilities
-====================================
+# Industry Models Additional Utilities
 
 Note: the items in this project are being shared on an "as-is" basis. 
 Please review the 'as-is' instruction at the root of this repository for details - covering the use of these item(s);
@@ -15,9 +14,6 @@ In order to install the Industry Models Additional Utilities' - please ensure yo
 http://www.ibm.com/support/fixcentral/quickorder?product=ibm%2FInformation+Management%2FIBM+Banking+and+Financial+Markets+Data+Warehouse&fixids=industry-models-utilities.04110.I20170726-1705.runtime-update_site.zip&source=SAR
 
 To check what version of 'Industry Models Utilities' you have installed - see Help, About, Installation Details to see what version of the Industry Models Utilities are installed. If you have installed the utilties from an 8.9.1 or earlier version of our Banking or Insurance offerings - then use the link above to update to the latest version - before installing the 'Industry Models Additional Utilities'.
-
-To install 'Industry Models Additional Utilities' - 
-
 
 # To install the Industry Models Additional Utilities:
 If you want to use IGC with IDA or RSA, install the IGC for Eclipse plug-in before you install the IBM Industry Model Utilities & Industry Models Additional Utilities.
@@ -48,7 +44,7 @@ https://www.ibm.com/support/knowledgecenter/SSRAR8_8.9.1/com.ibm.ima.adm/soa/Inf
 https://www.ibm.com/support/knowledgecenter/SSRA3Z_8.9.1/com.ibm.ima.too_gui/soa/InfoSphere/too_gui/im_uti_cat.html
 
 There is no direct support offered for 'Industry Models Additional Utilities' or other 'Tooling-as-is'components. 
-Problems 
+'Industry Models Utilities' issues or problems can be raised by opening a case against your product using  
 
 Regards,
 Industry Models Development Team, IBM
