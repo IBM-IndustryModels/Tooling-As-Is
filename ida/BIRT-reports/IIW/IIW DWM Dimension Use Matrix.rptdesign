@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.2.v201303011740 Build &lt;4.2.2.v20130301-1759></property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">Relationships.All Relationships.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">Relationships.All Relationships.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+    </list-property>
+    <property name="Relationships.All Relationships.x">135</property>
+    <property name="Relationships.All Relationships.y">80</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">11</property>
+        </structure>
+        <structure>
+            <property name="name">queryParameters</property>
+            <property name="id">11</property>
+        </structure>
+        <structure>
+            <property name="name">rowQuery</property>
+            <property name="id">11</property>
+        </structure>
+        <structure>
+            <property name="name">columnQueries</property>
+            <property name="id">11</property>
+        </structure>
+        <structure>
+            <property name="name">rowType</property>
+            <property name="id">11</property>
+        </structure>
+        <structure>
+            <property name="name">evaluateOnInstances</property>
+            <property name="id">11</property>
+        </structure>
+        <structure>
+            <property name="name">XPATH_EXPRESSION_TYPE</property>
+            <property name="id">11</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <data-sources>
+        <oda-data-source extensionID="com.ibm.datatools.publish.core" name="Logical Data Models" id="10">
+            <property name="instancemodels">platform:/resource/IDA-Project/Dimensional%20Warehouse%20Model.ldm</property>
+            <property name="metamodels">http:///com/ibm/db/models/logical/logical.ecore</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="com.ibm.datatools.publish.core.dataSet" name="All Relationships" id="11">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">Fact Type</property>
+                    <expression name="expression">row["Right Entity Name"].split(" ")[row["Right Entity Name"].split(" ").length - 1]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Concat</property>
+                    <expression name="expression">sevParLength =  BirtStr.charLength(row["Seventh Parent"]);&#13;
+sixParLength = BirtStr.charLength(row["Sixth Parent"]);&#13;
+fifParLength = BirtStr.charLength(row["Fifth Parent"]);&#13;
+forParLength = BirtStr.charLength(row["Fourth Parent"]);&#13;
+thrParLength = BirtStr.charLength(row["Third Parent"]);&#13;
+if(sevParLength > 0){&#13;
+	 row["Sixth Parent"] + "\\" + row["Fifth Parent"];&#13;
+	}&#13;
+else if(sixParLength > 0){&#13;
+	row["Fifth Parent"] + "\\" + row["Fourth Parent"];&#13;
+	}&#13;
+else if(fifParLength > 0){&#13;
+	row["Fourth Parent"] + "\\" + row["Third Parent"];&#13;
+	}&#13;
+else if(forParLength  >0){&#13;
+	row["Third Parent"]  + "\\" + row["Second Parent"];&#13;
+	}&#13;
+else if(thrParLength > 0){&#13;
+	row["Second Parent"] + "\\" + row["First Parent"];&#13;
+	}&#13;
+else{&#13;
+	row["First Parent"] + "\\";&#13;
+	}</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Model Info</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Model Info</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Model Info</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Relationship Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Relationship Name</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Relationship Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Relationship Definition</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Relationship Definition</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Relationship Definition</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Left Verb Phrase</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Left Verb Phrase</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Left Verb Phrase</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Left Cardinality</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Left Cardinality</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Left Cardinality</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Left Entity Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Left Entity Name</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Left Entity Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Right Verb Phrase</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Right Verb Phrase</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Right Verb Phrase</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Right Cardinality</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Right Cardinality</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Right Cardinality</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Right Entity Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Right Entity Name</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Right Entity Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Owning Entity Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Owning Entity Name</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Owning Entity Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">First Parent</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">First Parent</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">First Parent</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Right Entity Type</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Right Entity Type</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Right Entity Type</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Left Entity Type</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Left Entity Type</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Left Entity Type</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Second Parent</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Second Parent</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Second Parent</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Third Parent</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Third Parent</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Third Parent</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Fourth Parent</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Fourth Parent</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Fourth Parent</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Fifth Parent</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Fifth Parent</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Fifth Parent</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Sixth Parent</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Sixth Parent</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Sixth Parent</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Seventh Parent</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Seventh Parent</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">Seventh Parent</text-property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">ne</property>
+                    <expression name="expr" type="javascript">row["Right Entity Name"]</expression>
+                    <simple-property-list name="value1">
+                        <value>row["Left Entity Name"]</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Right Entity Type"]</expression>
+                    <simple-property-list name="value1">
+                        <value>"dimensional:Fact"</value>
+                    </simple-property-list>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Left Entity Type"]</expression>
+                    <simple-property-list name="value1">
+                        <value>"dimensional:Dimension"</value>
+                    </simple-property-list>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Model Info</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Relationship Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Relationship Definition</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">Left Verb Phrase</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">Left Cardinality</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">Left Entity Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Right Verb Phrase</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Right Cardinality</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Right Entity Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Owning Entity Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">First Parent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Right Entity Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">Left Entity Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">Second Parent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">Third Parent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">Fourth Parent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">Fifth Parent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">Sixth Parent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">Seventh Parent</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">Fact Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">Concat</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Logical Data Models</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Model Info</property>
+                    <property name="nativeName">Model Info</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Relationship Name</property>
+                    <property name="nativeName">Relationship Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Relationship Definition</property>
+                    <property name="nativeName">Relationship Definition</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">Left Verb Phrase</property>
+                    <property name="nativeName">Left Verb Phrase</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">Left Cardinality</property>
+                    <property name="nativeName">Left Cardinality</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">Left Entity Name</property>
+                    <property name="nativeName">Left Entity Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Right Verb Phrase</property>
+                    <property name="nativeName">Right Verb Phrase</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Right Cardinality</property>
+                    <property name="nativeName">Right Cardinality</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Right Entity Name</property>
+                    <property name="nativeName">Right Entity Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Owning Entity Name</property>
+                    <property name="nativeName">Owning Entity Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">First Parent</property>
+                    <property name="nativeName">First Parent</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Right Entity Type</property>
+                    <property name="nativeName">Right Entity Type</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">Left Entity Type</property>
+                    <property name="nativeName">Left Entity Type</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">Second Parent</property>
+                    <property name="nativeName">Second Parent</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">Third Parent</property>
+                    <property name="nativeName">Third Parent</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">Fourth Parent</property>
+                    <property name="nativeName">Fourth Parent</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">Fifth Parent</property>
+                    <property name="nativeName">Fifth Parent</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">Sixth Parent</property>
+                    <property name="nativeName">Sixth Parent</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">Seventh Parent</property>
+                    <property name="nativeName">Seventh Parent</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">7</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Model Info</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>7</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Model Info</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Model Info</design:label>
+            <design:formattingHints>
+              <design:displaySize>-1</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>rowTypeURI</name>
+                    <value>http:///com/ibm/db/models/logical/logical.ecore#//Relationship</value>
+                </ex-property>
+            </list-property>
+            <property name="rowQuery">instanceOf(//*, "LogicalDataModel:Relationship")</property>
+            <property name="columnQueries">Model Info;getModelInfo(.,"FileName");String#-#Relationship Name;@name;String#-#Relationship Definition;@description;String#-#Left Verb Phrase;relationshipEnds[1]/@verbPhrase;String#-#Left Cardinality;relationshipEnds[1]/@cardinality;String#-#Left Entity Name;relationshipEnds[1]/entity/@name;String#-#Right Verb Phrase;relationshipEnds[2]/@verbPhrase;String#-#Right Cardinality;relationshipEnds[2]/@cardinality;String#-#Right Entity Name;relationshipEnds[2]/entity/@name;String#-#Owning Entity Name;owningEntity/@name;String#-#First Parent;owningEntity/package/@name;String#-#Right Entity Type;getXMIType(relationshipEnds[2]/entity/extensions);String#-#Left Entity Type;getXMIType(relationshipEnds[1]/entity/extensions);String#-#Second Parent;owningEntity/package/parent/@name;String#-#Third Parent;owningEntity/package/parent/parent/@name;String#-#Fourth Parent;owningEntity/package/parent/parent/parent/@name;String#-#Fifth Parent;owningEntity/package/parent/parent/parent/parent/@name;String#-#Sixth Parent;owningEntity/package/parent/parent/parent/parent/parent/@name;String#-#Seventh Parent;owningEntity/package/parent/parent/parent/parent/parent/parent/@name;String</property>
+            <property name="rowType">LogicalDataModel:Relationship</property>
+            <property name="evaluateOnInstances">true</property>
+        </oda-data-set>
+    </data-sets>
+    <cubes>
+        <tabular-cube name="Relationships" id="722">
+            <property name="dimensions">
+                <tabular-dimension name="Fact" id="723">
+                    <property name="defaultHierarchy">NewTabularHierarchy</property>
+                    <property name="hierarchies">
+                        <tabular-hierarchy name="NewTabularHierarchy" id="724">
+                            <property name="levels">
+                                <tabular-level name="Fact Type" id="811">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">Fact Type</property>
+                                </tabular-level>
+                                <tabular-level name="Concat" id="893">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">Concat</property>
+                                </tabular-level>
+                                <tabular-level name="Fact" id="725">
+                                    <property name="dataType">string</property>
+                                    <property name="levelType">dynamic</property>
+                                    <property name="columnName">Right Entity Name</property>
+                                </tabular-level>
+                            </property>
+                        </tabular-hierarchy>
+                    </property>
+                </tabular-dimension>
+                <tabular-dimension name="Dimension" id="726">
+                    <property name="defaultHierarchy">NewTabularHierarchy1</property>
+                    <property name="hierarchies">
+                        <tabular-hierarchy name="NewTabularHierarchy1" id="727">
+                            <property name="levels">
+                                <tabular-level name="Dimension" id="728">
+                                    <property name="dataType">string</property>
+                                    <property name="levelType">dynamic</property>
+                                    <property name="columnName">Left Entity Name</property>
+                                </tabular-level>
+                            </property>
+                        </tabular-hierarchy>
+                    </property>
+                </tabular-dimension>
+            </property>
+            <property name="measureGroups">
+                <tabular-measure-group name="Relationship Count" id="729">
+                    <property name="measures">
+                        <tabular-measure name="Relationship" id="730">
+                            <property name="function">count</property>
+                            <property name="isCalculated">false</property>
+                            <expression name="measureExpression" type="javascript">dataSetRow["Model Info"]</expression>
+                            <property name="dataType">integer</property>
+                            <property name="isVisible">true</property>
+                        </tabular-measure>
+                    </property>
+                </tabular-measure-group>
+            </property>
+            <property name="dataSet">All Relationships</property>
+        </tabular-cube>
+    </cubes>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">"Verdana"</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">0.25in</property>
+            <property name="leftMargin">0.25in</property>
+            <property name="bottomMargin">0.25in</property>
+            <property name="rightMargin">0.25in</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <extended-item extensionName="Crosstab" extensionVersion="3.7.0" id="853">
+            <property name="cube">Relationships</property>
+            <property name="measures">
+                <extended-item extensionName="MeasureView" id="873">
+                    <property name="measure">Relationship</property>
+                    <property name="detail">
+                        <extended-item extensionName="AggregationCell" id="874">
+                            <property name="aggregationOnRow">Fact/Fact</property>
+                            <property name="aggregationOnColumn">Dimension/Dimension</property>
+                            <property name="content">
+                                <data id="875">
+                                    <property name="resultSetColumn">Relationship_Fact/Fact_Dimension/Dimension</property>
+                                </data>
+                            </property>
+                        </extended-item>
+                    </property>
+                    <property name="header">
+                        <extended-item extensionName="CrosstabCell" id="876"/>
+                    </property>
+                </extended-item>
+            </property>
+            <property name="rows">
+                <extended-item extensionName="CrosstabView" id="855">
+                    <property name="views">
+                        <extended-item extensionName="DimensionView" id="856">
+                            <property name="dimension">Fact</property>
+                            <property name="levels">
+                                <extended-item extensionName="LevelView" name="NewLevel View1" id="894">
+                                    <property name="level">Fact/Concat</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="895">
+                                            <property name="content">
+                                                <data name="Concat" id="898">
+                                                    <property name="resultSetColumn">Concat</property>
+                                                </data>
+                                            </property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                                <extended-item extensionName="LevelView" name="NewLevel View5" id="864">
+                                    <property name="level">Fact/Fact</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="865">
+                                            <property name="content">
+                                                <data name="Fact1" id="867">
+                                                    <property name="resultSetColumn">Fact</property>
+                                                </data>
+                                            </property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                            </property>
+                        </extended-item>
+                    </property>
+                </extended-item>
+            </property>
+            <property name="columns">
+                <extended-item extensionName="CrosstabView" id="882">
+                    <property name="views">
+                        <extended-item extensionName="DimensionView" id="868">
+                            <property name="dimension">Dimension</property>
+                            <property name="levels">
+                                <extended-item extensionName="LevelView" name="NewLevel View6" id="869">
+                                    <property name="level">Dimension/Dimension</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="870">
+                                            <property name="content">
+                                                <data name="Dimension1" id="872">
+                                                    <property name="resultSetColumn">Dimension</property>
+                                                </data>
+                                            </property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                            </property>
+                        </extended-item>
+                    </property>
+                </extended-item>
+            </property>
+            <property name="header">
+                <extended-item extensionName="CrosstabCell" id="897"/>
+                <extended-item extensionName="CrosstabCell" id="885"/>
+                <extended-item extensionName="CrosstabCell" id="896">
+                    <property name="content">
+                        <label id="899">
+                            <text-property name="text">Entity Path</text-property>
+                        </label>
+                    </property>
+                </extended-item>
+                <extended-item extensionName="CrosstabCell" id="866">
+                    <property name="content">
+                        <label id="880">
+                            <text-property name="text">Fact</text-property>
+                        </label>
+                    </property>
+                </extended-item>
+            </property>
+            <property name="fontFamily">"Calibri"</property>
+            <property name="fontSize">9pt</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Fact</property>
+                    <expression name="expression">dimension["Fact"]["Fact"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Dimension</property>
+                    <expression name="expression">dimension["Dimension"]["Dimension"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Relationship_Dimension/Dimension</property>
+                    <expression name="expression">measure["Relationship"]</expression>
+                    <property name="dataType">integer</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Dimension/Dimension</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                </structure>
+                <structure>
+                    <property name="name">Relationship_Fact/Fact</property>
+                    <expression name="expression">measure["Relationship"]</expression>
+                    <property name="dataType">integer</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Fact/Fact</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                </structure>
+                <structure>
+                    <property name="name">Relationship_Fact/Fact_Dimension/Dimension</property>
+                    <expression name="expression">measure["Relationship"]</expression>
+                    <property name="dataType">integer</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Fact/Fact</value>
+                        <value>Dimension/Dimension</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                </structure>
+                <structure>
+                    <property name="name">Concat</property>
+                    <expression name="expression">dimension["Fact"]["Concat"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+        </extended-item>
+    </body>
+</report>
