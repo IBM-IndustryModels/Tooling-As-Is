@@ -2,7 +2,7 @@
 © Copyright IBM Corp. 2017. All Rights Reserved.
 Clients are responsible for ensuring their own compliance with various laws and regulations, including the European Union General Data Protection Regulation. Clients are solely responsibility for obtaining advice of competent legal counsel as to the identification and interpretation of any relevant laws and regulations that may affect the clients’ business and any actions the clients may need to take to comply with such laws and regulations. The products, services, and other capabilities described herein are not suitable for all client situations and may have restricted availability. IBM does not provide legal, accounting or auditing advice or represent or warrant that its services or products will ensure that clients are in compliance with any law or regulation.
 
-Note: the items in this project are being shared on an "as-is" basis. Please review the 'as-is' instruction at the root of this repository for details - covering the use of these item(s); https://github.com/IBM-IndustryModels/Tooling-As-Is‪
+Note: the items in this project are being shared on an "as-is" basis. Please review the 'as-is' instruction at the root of this repository for details - covering the use of these item(s); https://github.com/IBM-IndustryModels/Tooling-As-Is
 
 # Industry Models Personal Information Sample
 The full Industry Models have robust, rich feature offerings available in a number of Industries:
