@@ -21,7 +21,7 @@ If you want to use IGC with IDA or RSA, install the IGC for Eclipse plug-in befo
 * On the Available Software wizard page, click Add.
 * In the Add Repository window, click Archive.
 * In the Repository archive window, select the Industry Models Additional Utilities update site from the installation directory:
-       https://github.com/IBM-IndustryModels/Tooling-As-Is/blob/master/Industry%20Models%20Additional%20Utilities/com.ibm.ima.ste.utilities.additional_4.1.1.20170726-1327.jar
+       https://github.com/IBM-IndustryModels/Tooling-As-Is/blob/master/Industry-Models-Additional-Utilities/com.ibm.ima.ste.utilities.additional_4.1.1.20170726-1327.jar
 * In the Add Repository window, click OK.
 * On the Available Software wizard page, select Group items by category.
 * From the displayed list, select the category that best matches your environment and click Next. For more information, see 'Categories Explained' below.
