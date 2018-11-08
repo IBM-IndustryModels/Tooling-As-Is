@@ -1,6 +1,7 @@
-# Industry Models - 'notex' - Jupyter Notebook / IPython Samples
+# Industry Models - 'notex' <br>
+# Jupyter Notebook / IPython Samples
 The enclosed Jupyter Python Notebooks are samples to demonstrate the ability to extract a 
-regulation, in this case ISO20022, from source eCore repository / XML into an intermediate
+regulation, in this case ISO20022, from source eCore repository XML into an intermediate
 csv taxonomy representation and the subsequent loading of the csv into InfoSphere Governance 
 Catalog (IGC), using IGC's Rest API feature. <br>
 
@@ -52,5 +53,12 @@ WORKDIR /home/$NB_USER
 CMD jupyter lab --ip=0.0.0.0 --no-browser --NotebookApp.token="$TOKEN" --NotebookApp.allow_origin="*"
 ```
 
-Regards, Industry Models team, IBM
+# Tooling-As-Is
+Industry Models Additional Utilities and Samples
+================================================
 
+Note: the items in this project are being shared on an "as-is" basis. Users may copy and modify Source Components and Sample Materials for internal use only provided however that Licensee may not alter or delete any copyright information or notices contained in the Source Components or Sample Materials. IBM provides the Source Components and Sample Materials without obligation of support and "AS IS", WITH NO WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING THE WARRANTY OF TITLE, NON-INFRINGEMENT OR NON-INTERFERENCE AND THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+There is no direct support offered for these components.
+
+Regards, Industry Models Development Team, IBM
