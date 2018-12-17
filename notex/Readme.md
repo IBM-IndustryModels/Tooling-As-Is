@@ -43,8 +43,8 @@ RUN adduser --disabled-password --gecos '' $NB_USER
 RUN mkdir /home/$NB_USER/work -p \
     mkdir /home/$NB_USER/reference -p
 
-ADD ./published/ /home/$NB_USER/reference
-ADD ./published/ /home/$NB_USER/work
+ADD ./ /home/$NB_USER/reference
+ADD ./ /home/$NB_USER/work
 RUN chown -R $NB_USER:$NB_USER /home/$NB_USER
 
 USER $NB_USER
