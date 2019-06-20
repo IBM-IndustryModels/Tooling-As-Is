@@ -12,7 +12,7 @@ Please consult the [IBM knowledge centre](https://www.ibm.com/support/knowledgec
 * Industry Models content installed on IGC
 
 ## Installation and execution
-* Extract the contents of GlossaryTools-1.0.zip
+* Extract the contents of GlossaryTools-1.4.zip
 * Navigate to the '/bin' directory within the extracted download
 * To execute on Windows
 ```
