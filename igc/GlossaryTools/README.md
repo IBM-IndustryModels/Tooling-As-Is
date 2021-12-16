@@ -8,7 +8,7 @@ This set of tools contains functionality that supplements IBM Infosphere Governa
 * IBM Infosphere Information Governance Catalog (IGC) 11.7.0.1 or higher (note: IGC 11.7.0.0 is not supported due to REST api issue)
 * Industry Models content installed on IGC
 ### Installation and execution
-* Extract the contents of the [GlossaryTools-1.5.zip](GlossaryTools-1.5.zip) download
+* Extract the contents of the [GlossaryTools-1.5.1.zip](GlossaryTools-1.5.1.zip) download
 * Navigate to the /bin directory within the extracted download
 * To execute on Windows
 ```
